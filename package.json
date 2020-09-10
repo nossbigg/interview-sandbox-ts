@@ -6,7 +6,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint src --ext .ts,.tsx --cache --fix --config .eslintrc.js",
+    "lint": "yarn lint:prettier && yarn lint:eslint",
+    "lint:prettier": "prettier --write src/**/*.{ts,tsx}",
+    "lint:eslint": "eslint src --ext .ts,.tsx --cache --fix --config .eslintrc.js",
     "eject": "react-scripts eject"
   },
   "dependencies": {
@@ -26,6 +28,7 @@
     "@typescript-eslint/parser": "4.1.0",
     "eslint": "7.8.1",
     "eslint-config-prettier": "6.11.0",
+    "prettier": "2.1.1",
     "react-scripts": "3.4.3"
   },
   "eslintConfig": {
